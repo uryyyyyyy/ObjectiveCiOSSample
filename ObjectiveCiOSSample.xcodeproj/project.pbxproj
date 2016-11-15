@@ -16,6 +16,7 @@
 		E71361331DDB574D00FBFC13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71361311DDB574D00FBFC13 /* LaunchScreen.storyboard */; };
 		E713613E1DDB574D00FBFC13 /* ObjectiveCiOSSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E713613D1DDB574D00FBFC13 /* ObjectiveCiOSSampleTests.m */; };
 		E71361491DDB574D00FBFC13 /* ObjectiveCiOSSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E71361481DDB574D00FBFC13 /* ObjectiveCiOSSampleUITests.m */; };
+		E71361591DDBCF8D00FBFC13 /* MyTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71361581DDBCF8D00FBFC13 /* MyTabViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		E71361441DDB574D00FBFC13 /* ObjectiveCiOSSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCiOSSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71361481DDB574D00FBFC13 /* ObjectiveCiOSSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCiOSSampleUITests.m; sourceTree = "<group>"; };
 		E713614A1DDB574D00FBFC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E71361571DDBCF7B00FBFC13 /* MyTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTabViewController.h; sourceTree = "<group>"; };
+		E71361581DDBCF8D00FBFC13 /* MyTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		E713611F1DDB574D00FBFC13 /* ObjectiveCiOSSample */ = {
 			isa = PBXGroup;
 			children = (
+				E71361561DDBCF5400FBFC13 /* tabbar */,
 				E71361231DDB574D00FBFC13 /* AppDelegate.h */,
 				E71361241DDB574D00FBFC13 /* AppDelegate.m */,
 				E71361261DDB574D00FBFC13 /* ViewController.h */,
@@ -141,6 +145,15 @@
 				E713614A1DDB574D00FBFC13 /* Info.plist */,
 			);
 			path = ObjectiveCiOSSampleUITests;
+			sourceTree = "<group>";
+		};
+		E71361561DDBCF5400FBFC13 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				E71361571DDBCF7B00FBFC13 /* MyTabViewController.h */,
+				E71361581DDBCF8D00FBFC13 /* MyTabViewController.m */,
+			);
+			name = tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 			files = (
 				E71361281DDB574D00FBFC13 /* ViewController.m in Sources */,
 				E71361251DDB574D00FBFC13 /* AppDelegate.m in Sources */,
+				E71361591DDBCF8D00FBFC13 /* MyTabViewController.m in Sources */,
 				E713612E1DDB574D00FBFC13 /* ObjectiveCiOSSample.xcdatamodeld in Sources */,
 				E71361221DDB574D00FBFC13 /* main.m in Sources */,
 			);
