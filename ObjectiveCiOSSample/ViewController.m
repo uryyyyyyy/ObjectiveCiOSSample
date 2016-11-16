@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MyModalViewController.h"
 #import "MyTabViewController.h"
 
 @implementation ViewController
@@ -16,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    items = (NSMutableArray *)@[@"push VC",@"modal VC",@"c"];
+    items = (NSMutableArray *)@[@"push View",@"modal View",@"Tab View"];
     UITableView *myTableView = [[UITableView alloc] initWithFrame:[self.view frame]];
     [self.view addSubview:myTableView];
     myTableView.dataSource = self;
@@ -35,14 +36,27 @@
     
     NSString *name = cell.textLabel.text;
     
-    if([name  isEqual: @"push VC"]){
+    if([name  isEqual: @"push View"]){
         NSLog(@"hello");
-        MyTabViewController *tabView = [[MyTabViewController alloc] init];
-        NSLog(@"self.navigationController=%@", self.navigationController);
+        MyModalViewController *tabView = [[MyModalViewController alloc] init];
         [self.navigationController pushViewController:tabView animated:YES];
-    }else if([name  isEqual: @"modal VC"]){
-        MyTabViewController *tabView = [[MyTabViewController alloc] init];
+    }else if([name  isEqual: @"modal View"]){
+        MyModalViewController *tabView = [[MyModalViewController alloc] init];
         [self presentViewController: tabView animated:YES completion: nil];
+    }else if([name  isEqual: @"Tab View"]){
+        UITabBarController *tabBar = [[UITabBarController alloc] init];
+        
+        UIViewController *tabView1 = [[MyModalViewController alloc] init];
+        tabView1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:1];
+        tabView1.title = @"画面1";
+        
+        UIViewController *tabView2 = [[MyModalViewController alloc] init];
+        tabView2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:2];
+        
+        NSArray *views = [NSArray arrayWithObjects:tabView1, tabView2, nil];
+        [tabBar setViewControllers:views animated:NO];
+        
+        [self.navigationController pushViewController:tabBar animated:YES];
     }
 }
 

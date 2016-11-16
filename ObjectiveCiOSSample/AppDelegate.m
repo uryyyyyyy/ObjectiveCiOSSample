@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "MyModalViewController.h"
 
 @implementation AppDelegate
 
@@ -20,10 +21,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // 最初に表示されるViewControllerを生成
+    // - ncをUITabBarControllerとかに突っ込めば途中からNavigationするなんてこともできる。
     ViewController *fvc = [[ViewController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:fvc];
+    
     self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
