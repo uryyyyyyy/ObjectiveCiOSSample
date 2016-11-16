@@ -14,18 +14,24 @@
     [super loadView];
     UIColor *customColor = [UIColor colorWithRed:0.2 green:0.8 blue:0.8 alpha:1.0];
     self.view.backgroundColor = customColor;
+    
+    self.navigationItem.title = @"ページ１";
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button addTarget:self
-//               action:@selector(aMethod:)
-//     forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(aMethod:)
+     forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"Back" forState:UIControlStateNormal];
     button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
     [self.view addSubview:button];
+}
+
+- (IBAction)aMethod:(id)sender {
+    NSLog(@"Click");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)aMethod {

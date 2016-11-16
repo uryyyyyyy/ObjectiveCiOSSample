@@ -22,6 +22,8 @@
     myTableView.dataSource = self;
     myTableView.delegate = self;
     
+    self.navigationItem.title = @"タイトル";
+    
     NSLog(@"hello");
 }
 
