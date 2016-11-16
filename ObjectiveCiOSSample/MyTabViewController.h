@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyTabViewViewController : UIViewController
+@interface MyTabViewController : UIViewController
 
 
 @end

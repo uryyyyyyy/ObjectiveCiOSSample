@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MyTabViewController.h"
 
 @implementation ViewController
 
@@ -15,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    items = (NSMutableArray *)@[@"a",@"b",@"c"];
+    items = (NSMutableArray *)@[@"push VC",@"modal VC",@"c"];
     UITableView *myTableView = [[UITableView alloc] initWithFrame:[self.view frame]];
     [self.view addSubview:myTableView];
     myTableView.dataSource = self;
@@ -32,12 +33,14 @@
     
     NSString *name = cell.textLabel.text;
     
-    if([name  isEqual: @"a"]){
-        NSString *message = [NSString stringWithFormat:@"%@%@",@"You've selected a ", name];
-        UIAlertView *messageAlert = [[UIAlertView alloc]
-                                     initWithTitle:@"Row Selected" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        // Display Alert Message
-        [messageAlert show];
+    if([name  isEqual: @"push VC"]){
+        NSLog(@"hello");
+        MyTabViewController *tabView = [[MyTabViewController alloc] init];
+        NSLog(@"self.navigationController=%@", self.navigationController);
+        [self.navigationController pushViewController:tabView animated:YES];
+    }else if([name  isEqual: @"modal VC"]){
+        MyTabViewController *tabView = [[MyTabViewController alloc] init];
+        [self presentViewController: tabView animated:YES completion: nil];
     }
 }
 
