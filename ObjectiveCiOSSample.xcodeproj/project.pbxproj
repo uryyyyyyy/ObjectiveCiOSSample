@@ -107,7 +107,7 @@
 		E713611F1DDB574D00FBFC13 /* ObjectiveCiOSSample */ = {
 			isa = PBXGroup;
 			children = (
-				E783EF851DDCBC3500FB60C2 /* simple */,
+				E783EF851DDCBC3500FB60C2 /* web */,
 				E783EF811DDCA06B00FB60C2 /* modal */,
 				E71361561DDBCF5400FBFC13 /* tabbar */,
 				E71361231DDB574D00FBFC13 /* AppDelegate.h */,
@@ -167,11 +167,11 @@
 			name = modal;
 			sourceTree = "<group>";
 		};
-		E783EF851DDCBC3500FB60C2 /* simple */ = {
+		E783EF851DDCBC3500FB60C2 /* web */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = simple;
+			name = web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

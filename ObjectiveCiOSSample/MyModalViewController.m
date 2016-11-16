@@ -27,6 +27,12 @@
     [button setTitle:@"Back" forState:UIControlStateNormal];
     button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
     [self.view addSubview:button];
+    
+    UIImage *img1 = [UIImage imageNamed:@"icon3"];
+    UIImageView *iv = [[UIImageView alloc] initWithImage:img1];
+    
+    iv.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [self.view addSubview:iv];
 }
 
 - (IBAction)aMethod:(id)sender {

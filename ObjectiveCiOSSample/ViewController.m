@@ -51,9 +51,14 @@
         tabView1.title = @"画面1";
         
         UIViewController *tabView2 = [[MyModalViewController alloc] init];
-        tabView2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:2];
+        tabView2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
         
-        NSArray *views = [NSArray arrayWithObjects:tabView1, tabView2, nil];
+        UIViewController *tabView3 = [[MyModalViewController alloc] init];
+        UIImage *img1 = [UIImage imageNamed:@"car-side-7"];
+        tabView3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"MyTitle" image:img1 tag:3];
+
+        
+        NSArray *views = [NSArray arrayWithObjects:tabView1, tabView2, tabView3, nil];
         [tabBar setViewControllers:views animated:NO];
         
         [self.navigationController pushViewController:tabBar animated:YES];
